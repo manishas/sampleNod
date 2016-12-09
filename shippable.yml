@@ -9,10 +9,9 @@ branches:
   only:
     - master
     
-env:
-  global:
-    - IMAGE_TAG=dev
-    - BUILD_TASK=test
+env:    
+  - IMAGE_TAG=dev
+  - BUILD_TASK=test
     
 build:
   pre_ci:
