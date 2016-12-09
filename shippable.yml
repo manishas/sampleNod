@@ -10,8 +10,7 @@ branches:
     - master
     
 env:    
-  - IMAGE_TAG=dev
-  - BUILD_TASK=test
+  - IMAGE_TAG=dev BUILD_TASK=test
     
 build:
   pre_ci:
