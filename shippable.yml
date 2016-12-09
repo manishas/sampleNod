@@ -9,9 +9,20 @@ branches:
   only:
     - master
     
+env:
+  global:
+    - IMAGE_TAG=dev
+    - BUILD_TASK=test
+    
 build:
   pre_ci:
-    - echo "this is master branch"
+    - if [ "$BRANCH" == "master" ] || [ "$BRANCH" == "staging" ] || [ "$BRANCH" == "develop" ] ; then export IMAGE_TAG="1.0.0" ; else export IMAGE_TAG="dev" ; fi
+
+  pre_ci_boot:
+    image_name: drydock/u14nod
+    image_tag: $IMAGE_TAG
+    pull: true
+    options: "-e HOME=/root"
 
   ci:
     - echo "this is ci"
