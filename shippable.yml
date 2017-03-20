@@ -13,20 +13,6 @@ env:
   - IMAGE_TAG=dev BUILD_TASK=test
     
 build:
-  pre_ci:
-    - if [ "$BRANCH" == "master" ] || [ "$BRANCH" == "staging" ] || [ "$BRANCH" == "develop" ] ; then export IMAGE_TAG="1.0.0" ; else export IMAGE_TAG="dev" ; fi
-    - echo $IMAGE_TAG
-    - export IMAGE_TAG="marker"
-    - docker pull drydock/u14nod:$IMAGE_TAG
-    - docker tag drydock/u14nod:$IMAGE_TAG drydock/u14nod:ci
-    
-
-  pre_ci_boot:
-    image_name: drydock/u14nod
-    image_tag: ci
-    pull: false
-    options: "-e HOME=/root"
-
   ci:
     - echo "this is ci"
 
