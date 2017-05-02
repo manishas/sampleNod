@@ -17,5 +17,5 @@ build:
   ci:
     - if [ "$HOME_SITE" == "home-site" ]; then echo $HOME_SITE; fi
     - if [ "$HOME_SITE_MOBILE" == "home-site-mobile" ]; then echo $HOME_SITE_MOBILE; fi
-    
+    - echo versionName="0.0.2" > /build/state/myVersion.env
 
