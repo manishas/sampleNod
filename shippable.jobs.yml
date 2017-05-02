@@ -3,11 +3,11 @@ jobs:
     type: runCI             
     steps:                  
       - IN: myParams
+      - OUT: myVersion
       
   - name: myRelease
     type: release
     steps:
-      - IN: myVersion
-      - IN: sampleNod_runCI  
+      - IN: myVersion  
       - TASK:   managed                      
         bump: minor  
