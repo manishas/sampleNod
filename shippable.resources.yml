@@ -1,0 +1,11 @@
+resources:
+  - name: myParams
+    type: params
+    version:
+      params:
+        foo: "BAR"
+        
+  - name: myVersion
+    type: version
+    seed:
+      versionName: "0.0.1"
