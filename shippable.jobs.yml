@@ -9,3 +9,5 @@ jobs:
     steps:
       - IN: myVersion
       - IN: sampleNod_runCI  
+      - TASK:   managed                      
+        bump: minor  
