@@ -1,6 +1,8 @@
 jobs:
   - name: sampleNod_runCI      
-    type: runCI             
+    type: runCI
+    steps:
+      - IN: myParams
       
   - name: myRelease
     type: release
