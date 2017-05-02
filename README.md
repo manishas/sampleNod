@@ -1,4 +1,4 @@
-# manishas/sampleNod   
+# sampleNod   
 
 Sample for NodeJS with some basic commands to demonstrate the working of folder level caching of shippable.
 
