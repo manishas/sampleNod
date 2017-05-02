@@ -1,6 +1,6 @@
 # sampleNod   
 
-Test sample for NodeJS with some basic commands to demonstrate the working of folder level caching of shippable.
+Sample for NodeJS with some basic commands to demonstrate the working of folder level caching of shippable.
 
 This repository has 3 files and the functions of each file are as follows.
 1. README.md - Contains an some basic conventions and guidelines to show the working of folder level caching.
