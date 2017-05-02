@@ -10,13 +10,12 @@ branches:
     - master
     
 env:    
-  - IMAGE_TAG=dev BUILD_TASK=test
+  - HOME_SITE=home-site
+  - HOME_SITE_MOBILE=home-site-mobile
     
 build:
   ci:
-    - echo "this is ci"
-
-  post_ci:
-    - ls -a
-    - pwd
+    - if [ "$HOME_SITE" == "home-site" ]; then echo $HOME_SITE; fi
+    - if [ "$HOME_SITE_MOBILE" == "home-site-mobile" ]; then echo $HOME_SITE_MOBILE; fi
+    
 
