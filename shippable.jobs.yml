@@ -3,7 +3,7 @@ jobs:
     type: runCI             
     steps:                  
       - IN: myParams
-      - OUT: myVersion
+      - OUT: myRelease
       
   - name: myRelease
     type: release
