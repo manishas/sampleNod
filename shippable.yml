@@ -17,6 +17,7 @@ build:
     - if [ "$HOME_SITE" == "home-site" ]; then echo $HOME_SITE; fi
     - echo $JOB_STATE
     - printenv
+    - return 1
   always:
     - echo $HOME_SITE
 
