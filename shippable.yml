@@ -18,6 +18,6 @@ build:
     - echo $JOB_STATE
     - printenv
     - return 1
-  always:
+  on_always:
     - echo $HOME_SITE
 
