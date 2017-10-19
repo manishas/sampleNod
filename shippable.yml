@@ -11,12 +11,12 @@ branches:
     
 env:    
   - HOME_SITE=home-site
-  - HOME_SITE_MOBILE=home-site-mobile
     
 build:
   ci:
     - if [ "$HOME_SITE" == "home-site" ]; then echo $HOME_SITE; fi
-    - if [ "$HOME_SITE_MOBILE" == "home-site-mobile" ]; then echo $HOME_SITE_MOBILE; fi
     - echo $JOB_STATE
     - printenv
+  always:
+    - echo $HOME_SITE
 
